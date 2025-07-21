@@ -1,0 +1,61 @@
+
+{% extends "base.html" %}
+{% block title %}Dashboard | MoonDrip{% endblock %}
+
+{% block content %}
+<header class="hero">
+  <div class="hero-content">
+    <h1>Welcome, {{ user.email }}</h1>
+    <p class="subhead">MoonDrip Suite Access</p>
+  </div>
+</header>
+
+<section class="about">
+  <h2>Your Calculator Suite</h2>
+  <div class="calculator-grid">
+    <div class="calc-card">
+      <h3>📈 DCA Calculator</h3>
+      <p>Plan your dollar-cost averaging strategy with historical data and projections.</p>
+      <a href="https://77839502-2921-484a-acbb-ac8d484464d4-00-208iw1bmnczah.kirk.replit.dev/" class="cta-button" target="_blank">Launch DCA Tool</a>
+    </div>
+    <div class="calc-card">
+      <h3>💰 Staking Calculator</h3>
+      <p>Calculate potential staking rewards for various cryptocurrencies.</p>
+      <a href="https://77839502-2921-484a-acbb-ac8d484464d4-00-208iw1bmnczah.kirk.replit.dev/" class="cta-button secondary" target="_blank">Coming Soon</a>
+    </div>
+    <div class="calc-card">
+      <h3>🌊 Liquidity Pool Tools</h3>
+      <p>Analyze impermanent loss and yield farming opportunities.</p>
+      <a href="https://77839502-2921-484a-acbb-ac8d484464d4-00-208iw1bmnczah.kirk.replit.dev/" class="cta-button secondary" target="_blank">Coming Soon</a>
+    </div>
+  </div>
+</section>
+
+<section class="tool-highlight">
+  <h2>Account Status</h2>
+  {% if user.is_paid %}
+    <ul>
+      <li>✅ Premium access enabled</li>
+      <li>🚫 Ad-free experience</li>
+      <li>📊 Advanced analytics</li>
+      <li>🎯 Priority support</li>
+    </ul>
+  {% else %}
+    <ul>
+      <li>🆓 Free tier active</li>
+      <li>📱 Basic calculator access</li>
+      <li>📊 Standard features</li>
+      <li>🎯 Community support</li>
+    </ul>
+    <a href="{{ url_for('membership') }}" class="cta-button">Upgrade to Premium</a>
+  {% endif %}
+</section>
+
+{% if not user.is_paid %}
+<section class="signup">
+  <h2>🚀 Upgrade to Premium</h2>
+  <p>Remove ads and unlock advanced features for serious crypto investors.</p>
+  <a href="{{ url_for('membership') }}" class="cta-button">Learn More</a>
+</section>
+{% endif %}
+{% endblock %}

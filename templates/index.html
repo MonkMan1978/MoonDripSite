@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MoonDrip</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+  <!-- 🔹 Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">MoonDrip</a>
+
+      <div class="nav-menu">
+        <a href="/calculator.html" class="nav-link">Calculator</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/education.html" class="nav-link">Education</a>
+        <a href="/sponsors.html" class="nav-link">Sponsors</a>
+        <a href="/join.html" class="nav-link">Join</a>
+      </div>
+
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Clarity in the Chaos.</h1>
+      <p class="hero-subtitle">Calculators for the Decentralized Future.</p>
+      <a href="/calculator.html" class="cta-button">🚀 Try the DCA Calculator</a>
+    </div>
+  </header>
+
+  <!-- 🔹 Feature Section -->
+  <section class="features">
+    <div class="feature">
+      <h2>📊 Backtest with Confidence</h2>
+      <p>Simulate long-term investing using real historical data.</p>
+    </div>
+    <div class="feature">
+      <h2>📁 Export Your Strategy</h2>
+      <p>Download your results in CSV or PDF formats for easy tracking.</p>
+    </div>
+    <div class="feature">
+      <h2>🧠 Built for Beginners & Degens</h2>
+      <p>Whether you're new to crypto or deep in the weeds, MoonDrip is built to guide.</p>
+    </div>
+  </section>
+
+  <!-- 🔹 About Section -->
+  <section class="about">
+    <h2>Why MoonDrip?</h2>
+    <p>We’re not just about numbers — we’re building tools to demystify crypto and empower the next wave of decentralized creators and investors.</p>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 MoonDrip by Root Kore Labs. All rights reserved.</p>
+    <p class="legal-content">⚠️ This is a backtest tool, not a prediction engine. Results are based on historical data and do not guarantee future performance.</p>
+  </footer>
+
+  <!-- 🔹 Scripts -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

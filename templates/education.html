@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Education – MoonDrip</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+  <!-- 🔹 Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">MoonDrip</a>
+
+      <div class="nav-menu">
+        <a href="/calculator.html" class="nav-link">Calculator</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/education.html" class="nav-link">Education</a>
+        <a href="/sponsors.html" class="nav-link">Sponsors</a>
+        <a href="/join.html" class="nav-link">Join</a>
+      </div>
+
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 Education Section -->
+  <section class="about">
+    <h2>Crypto Education That Doesn't Suck</h2>
+    <p>MoonDrip Education is your no-fluff, real-talk zone. We’re not here to sell you on moonshots or memecoins. We're here to help you understand the why behind the charts, the tech behind the tokens, and the mindset behind long-term wealth.</p>
+    <p>From backtesting strategies to staking mechanics, our guides and tools are designed to help you level up — without getting lost in crypto jargon or hype cycles.</p>
+    <p>Coming soon: beginner-friendly crash courses, deep dives, and some spicy “Degen Do’s & Don’ts.”</p>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 MoonDrip by Root Kore Labs. All rights reserved.</p>
+    <p class="legal-content">⚠️ This is a backtest tool, not a prediction engine. Results are based on historical data and do not guarantee future performance.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
